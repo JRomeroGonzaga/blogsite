@@ -54,6 +54,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 90px;
+    align-items: center;
 }
 
 .nav-logo-container {
@@ -67,7 +68,6 @@ nav {
 
 .link-perfil {
     display: flex;
-    align-items: center;
     justify-self: flex-end;
 }
 
@@ -77,23 +77,62 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    width: 100%;
+}
+
+.welcome-to-user .text-home-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-main-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-text {
+    font-size: 40px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(218, 76, 231, 0.9);
+    text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {
-    
+
 }
 
 @media only screen and (max-width: 768px) {
     .icon-item {
-        font-size: 0.8em;
+        font-size: 0.5em;
+    }
+
+    .nav-logo-container img {
+        height: 75px;
+    }
+
+    .main-text {
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    
+    .main-text {
+        font-size: 18px;
+    }
+
+    .nav-logo-container img {
+        height: 65px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
-
+    .nav-logo-container img {
+        height: 50px;
+    }
 }
