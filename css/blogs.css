@@ -1,14 +1,7 @@
-body {
-    overflow-x: hidden;
-}
-
 .last-information-container {
     display: grid;
-    grid-template-columns: 1fr 0.5fr 50px 1fr;
-    grid-template-rows: 80px 1fr 1fr 1fr;
-    grid-template-areas: "title-nt . . ."
-                         "content-img-nt content-img-nt . nt-info"
-                         "content-img-nt content-img-nt . nt-info";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 250px 1fr;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -16,9 +9,10 @@ body {
 }
 
 .title-nt {
-    grid-area: title-nt;
     animation: neon-shadow 1s infinite alternate;
 }
+
+
 
 @keyframes neon-shadow {
     0% {
@@ -48,17 +42,21 @@ body {
     }
 }
 
+
+
 .content-img-nt {
-    grid-area: content-img-nt;
+    grid-row: 2;
     width: 100%;
 }
 
-.content-img-nt {
+.content-img-nt img {
+    width: 100%;
+    height: auto;
     animation: neonboxShadown 3s alternate infinite;
 }
 
 .nt-info {
-    grid-area: nt-info;
+    grid-row: 3;
     text-align: justify;
     align-self: center;
     font-size: 1em;
@@ -94,37 +92,53 @@ body {
 }
 
 .title-blog {
-    grid-area: title-blog;
     text-align: center;
     justify-self: center;
     font-size: 2.5em;
 }
 
+
+@media only screen and (min-width: 769px) {
+    .last-information-container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    .content-img-nt {
+        grid-column: 1;
+        grid-row: none;
+    }
+
+    .nt-info {
+        grid-column: 2;
+        grid-row: none;
+    }
+
+    .content-img-nt img {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
 @media only screen and (max-width: 768px) {
     .last-information-container {
-        grid-template-columns: 20px 1fr 1fr 20px;
-        grid-template-rows: 0.1fr 1fr 1fr 30px 1fr;
-        grid-template-areas: "title-nt title-nt . ."
-        "content-img-nt content-img-nt content-img-nt content-img-nt"
-        "content-img-nt content-img-nt content-img-nt content-img-nt"
-        ". . . ."
-        ". nt-info nt-info .";
-        justify-content: center;
-        font-size: .9em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 2fr 1fr;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .last-information-container {
-        grid-template-columns: 20px 1fr 1fr 20px;
-        grid-template-rows: 0.1fr 140px 140px 30px 1fr;
+        grid-template-rows: 50px 1fr 1fr;
+        font-size: 0.8em;
     }
 }
 
 @media only screen and (max-width: 320px) {
     .last-information-container {
-        grid-template-columns: 20px 1fr 1fr 20px;
-        grid-template-rows: 0.1fr 100px 100px 30px 1fr;
         font-size: .7em;
     }
 }
