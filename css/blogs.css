@@ -5,11 +5,12 @@ body {
 .last-information-container {
     display: grid;
     grid-template-columns: 1fr 0.5fr 50px 1fr;
-    grid-template-rows: 0.1fr 0.5fr 0.49fr;
+    grid-template-rows: 80px 1fr 1fr 1fr;
     grid-template-areas: "title-nt . . ."
                          "content-img-nt content-img-nt . nt-info"
                          "content-img-nt content-img-nt . nt-info";
     justify-content: center;
+    align-items: center;
     color: #fff;
 }
 
@@ -48,6 +49,7 @@ body {
 
 .content-img-nt {
     grid-area: content-img-nt;
+    width: 100%;
 }
 
 .content-img-nt {
@@ -58,11 +60,6 @@ body {
     grid-area: nt-info;
     text-align: justify;
     align-self: center;
-}
-
-.nt-info h2 {
-    text-align: center;
-    font-size: 2.5em;
 }
 
 .nt-info p {
@@ -78,7 +75,7 @@ body {
 
 .all-blogposts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 15px;
     justify-content: center;
     padding: 2em 0;
@@ -92,4 +89,26 @@ body {
 .all-blogposts .card:hover {
     transition: .2s;
     animation: neonboxShadown 3s infinite alternate;
+}
+
+.title-blog {
+    grid-area: title-blog;
+    text-align: center;
+    justify-self: center;
+    font-size: 2.5em;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .last-information-container {
+        grid-template-columns: 20px 1fr 1fr 20px;
+        grid-template-rows: 0.1fr 1fr 1fr 30px 1fr;
+        grid-template-areas: "title-nt title-nt . ."
+                             "content-img-nt content-img-nt content-img-nt content-img-nt"
+                             "content-img-nt content-img-nt content-img-nt content-img-nt"
+                             ". . . ."
+                             ". nt-info nt-info .";
+        justify-content: center;
+        font-size: .8em;
+    }
 }
