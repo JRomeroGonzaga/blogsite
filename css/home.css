@@ -80,9 +80,21 @@ nav {
     text-transform: uppercase;
     letter-spacing: 10px;
     color: #fff;
-    text-shadow: 0 0 3px rgba(218, 76, 231, 0.9);
+    text-shadow: 0 0 3px rgba(157, 40, 116, 0.9);
     text-align: center;
 }
+
+.icon-item {
+    color: #fff;
+    padding: 5px 10px;
+    background: linear-gradient(to left, rgba(157, 40, 116, 1) 0%, rgba(53,53,53,1) 100%);
+}
+
+.icon-item:hover {
+    color: #fff;
+    box-shadow: 0 0 8px 0 rgba(157, 40, 116, 0.9);
+}
+
 
 @media only screen and (max-width: 1024px) {
 
