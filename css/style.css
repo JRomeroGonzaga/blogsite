@@ -185,6 +185,7 @@ body::-webkit-scrollbar-thumb {
 
 .container {
     max-width: 1200px;
+    width: 100%;
 }
 
 .btn {
@@ -243,6 +244,7 @@ footer {
 @media only screen and (max-width: 1024px) {
     .container {
         padding: 0 15px;
+        width: auto;
     }
 }
 
